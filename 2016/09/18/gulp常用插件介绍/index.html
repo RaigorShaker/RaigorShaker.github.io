@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="CSS div上下左右居中"/>
+        <meta property="og:title" content="gulp常用插件介绍"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>CSS div上下左右居中 - 前端这些事儿</title>
+    <title>gulp常用插件介绍 - 前端这些事儿</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -143,12 +143,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>CSS div上下左右居中</h1>
+                    <h1>gulp常用插件介绍</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
-                        2016-09-12
+                        2016-09-18
                     </span>
                 </div>
             </div>
@@ -168,7 +168,7 @@
                         
 
 
-<a href="/tags/CSS/">#CSS</a>
+<a href="/tags/gulp-构建工具/">#gulp 构建工具</a>
 
 
                     
@@ -183,19 +183,7 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p><code>div</code>上下左右居中方法</p>
-<ul>
-<li><p>方法一</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">    .div1&#123;width:100px;height:100px;border:1px solid #000000;&#125;</div><div class="line">    .div2&#123;width:40px;height:40px;background:green&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div1"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>  最直观的方法，可以给<code>div2</code>设置<code>margin-left</code>和<code>margin-top</code>来使<code>div2</code>上下左右居中，<code>margin-left</code>值为外层<code>div</code>的宽度的<code>1/2</code> - 内部<code>div</code>宽度的<code>1/2</code>，<code>margin-top</code>的值同理，只不过取得基准为<code>div</code>的高度。<br>  在此例中，<code>div2</code>的<code>margin-left</code>和<code>margin-top</code>的值应该都为<code>30px</code>，修改后如下：</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">    .div1&#123;width:100px;height:100px;border:1px solid #000000;&#125;</div><div class="line">    .div2&#123;width:40px;height:40px;background:green;margin-left:30px;margin-top:30px;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div1"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>方法二<br>  最简单的方法，将外层的<code>div1</code>的<code>display</code>属性设置成<code>table-cell</code>，并添加<code>vertical-align:middle</code>样式，内部的<code>div2</code>的样式添加<code>margin:auto</code>即可实现上下左右居中，因为表格样式里自动会包含居中对齐的样式，所以此种方法最简便，并且不需要额外的计算。<strong>推荐使用</strong>。</p>
-</li>
-<li>方法三<br>  可以对<code>div2</code>采用绝对定位的方式来处理，前提是要相对于<code>div1</code>来绝对定位，所以需要给<code>div1</code>添加<code>position:relative</code>样式，并且将<code>div2</code>的<code>left</code>、<code>right</code>、<code>bottom</code>、<code>top</code>属性都设置为<code>0</code>，另外添加<code>margin:auto</code>属性，就可以使<code>div2</code>上下左右居中了。<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">    .div1&#123;width:100px;height:100px;border:1px solid #000000;position:relative;&#125;</div><div class="line">    .div2&#123;width:40px;height:40px;background:green;position:absolute;bottom:0;top:0;left:0;right:0;margin:auto;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div1"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>记录下来，留做备份。</p>
+                <p>##gulp 常用插件列表</p>
 
 
                 
